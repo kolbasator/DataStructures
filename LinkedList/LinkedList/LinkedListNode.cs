@@ -8,6 +8,7 @@ namespace LinkedList
     {
         public T Data { get; set; }
         public ILinkedListNode<T> Next { get; set; }
+        public ILinkedListNode<T> Previous { get; set; }
         public LinkedListNode(T data)
         {
             Data = data;

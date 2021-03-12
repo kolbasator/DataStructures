@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zb9d6F5kIVjBVUvvR8MkZ5zPjyyNxcBD/e2I36xCP1mQyyA0VebI0wpPzw6CmO6bC11428rQw9xwetZPurF5yg==",
+  "dgSpecHash": "L80My+TXxuBjZWnW+6+/uKlDpzUII0rb94xJtGNDNpbkS8b1whN1mP0BSKusZhiovk/dUnr7jGl1zLgFX8v/Xg==",
   "success": true,
   "projectFilePath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\LinkedList\\LinkedList\\LinkedList.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\777\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
+    "C:\\Users\\777\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\777\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+  ],
   "logs": []
 }

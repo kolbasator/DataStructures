@@ -15,7 +15,7 @@ namespace LinkedList
         private bool _contains { get; set; }
         private ILinkedListNode<T> _findResult { get; set; }
         public ILinkedListNode<T> AddFirst(T entity)
-        { 
+        {
             if (First == null)
             {
                 First = new LinkedListNode<T>(entity);
@@ -25,6 +25,7 @@ namespace LinkedList
             var head = First;
             var node = new LinkedListNode<T>(entity);
             node.Next = head;
+            head.Previous = node;
             First = node;
             SetTail(First);
             _count++;
@@ -35,23 +36,29 @@ namespace LinkedList
             if (First == null)
             {
                 First = new LinkedListNode<T>(entity);
+                _count++;
                 return First;
             }
-            SetHeadLast(First , new LinkedListNode<T>(entity));
+            SetHeadLast(First, new LinkedListNode<T>(entity));
             SetTail(First);
-            _count++; 
+            _count++;
             return new LinkedListNode<T>(entity);
         }
         public void RemoveFirst()
         {
             var newHead = First.Next;
+            newHead.Previous = null;
             First = newHead;
             SetTail(First);
             _count--;
         }
-        private void SetFindProperty(ILinkedListNode<T> item,T entity)
+        private void SetFindProperty(ILinkedListNode<T> item, T entity)
         {
-            if (item.Data.Equals(entity))
+            if (item == null)
+            {
+                _findResult = null; 
+            }
+            else if (item.Data.Equals(entity))
             {
                 _findResult = item;
             }
@@ -66,7 +73,7 @@ namespace LinkedList
         }
         public bool Contains(T entity)
         {
-            SetContainsProperty(First, entity);
+            SetContains(First, entity);
             var result = _contains;
             _contains = false;
             return result;
@@ -86,36 +93,35 @@ namespace LinkedList
             {
                 next = current.Next;
                 current.Next = previos;
+                current.Previous = next;
                 previos = current;
                 current = next;
+
             }
             First = previos;
             SetTail(First);
         }
-        private void SetContainsProperty(ILinkedListNode<T> item,T entity)
-        { 
-            if (item.Data.Equals(entity))
+        private void SetContains(ILinkedListNode<T> item, T entity)
+        {
+            if (item == null)
+            {
+                _contains = false;
+            }
+            else if (item.Data.Equals(entity))
             {
                 _contains = true;
             }
             else
-            {
-                SetContainsProperty(item.Next, entity);
-            }
+                SetContains(item.Next, entity);
         }
         private void DeleteLast(ILinkedListNode<T> item)
         {
-            if (item.Next  == null)
-            { 
-                Last = _items[_items.Count-1];
+            if (item.Next == null)
+            {
+                var newLast = _items[_items.Count - 1];
+                newLast.Next = null;
+                Last = newLast;
                 First = _items[0];
-                foreach(var element in _items)
-                {
-                    if (_items.IndexOf(element) != 0)
-                    {
-                        SetHeadLast(First, element); 
-                    }
-                }
                 _items.Clear();
                 _count--;
             }
@@ -130,23 +136,20 @@ namespace LinkedList
             if (item.Next == null)
             {
                 Last = item;
+                Last.Previous = item.Previous;
             }
             else
-            {
                 SetTail(item.Next);
-            }
         }
-        private void SetHeadLast(ILinkedListNode<T> item,ILinkedListNode<T> node)
+        private void SetHeadLast(ILinkedListNode<T> item, ILinkedListNode<T> node)
         {
             if (item.Next == null)
             {
-                item.Next =node;
-
+                node.Previous = item;
+                item.Next = node;
             }
             else
-            {
-                SetHeadLast(item.Next,node); 
-            }
+                SetHeadLast(item.Next, node);
         }
         public void Clear()
         {
