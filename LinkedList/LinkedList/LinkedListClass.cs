@@ -10,8 +10,7 @@ namespace LinkedList
         public bool IsEmpty => _count == 0;
         public int Count => _count;
         public ILinkedListNode<T> First { get; set; }
-        public ILinkedListNode<T> Last { get; set; }
-        private List<ILinkedListNode<T>> _items = new List<ILinkedListNode<T>>();
+        public ILinkedListNode<T> Last { get; set; } 
         private bool _contains { get; set; }
         private ILinkedListNode<T> _findResult { get; set; }
         public ILinkedListNode<T> AddFirst(T entity)
@@ -69,7 +68,18 @@ namespace LinkedList
         }
         public void RemoveLast()
         {
-            DeleteLast(First);
+            Delete(First);
+            _count--;
+            SetTail(First);
+        }
+        private void Delete(ILinkedListNode<T> node)
+        {
+            if (node.Next.Next == null)
+            {
+                node.Next = null;
+            }
+            else
+                Delete(node.Next);
         }
         public bool Contains(T entity)
         {
@@ -114,23 +124,7 @@ namespace LinkedList
             else
                 SetContains(item.Next, entity);
         }
-        private void DeleteLast(ILinkedListNode<T> item)
-        {
-            if (item.Next == null)
-            {
-                var newLast = _items[_items.Count - 1];
-                newLast.Next = null;
-                Last = newLast;
-                First = _items[0];
-                _items.Clear();
-                _count--;
-            }
-            else
-            {
-                _items.Add(item);
-                DeleteLast(item.Next);
-            }
-        }
+         
         private void SetTail(ILinkedListNode<T> item)
         {
             if (item.Next == null)
