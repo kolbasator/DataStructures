@@ -1,0 +1,9 @@
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\bin\Debug\netcoreapp3.1\BinaryHeap.deps.json
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\bin\Debug\netcoreapp3.1\BinaryHeap.dll
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\bin\Debug\netcoreapp3.1\BinaryHeap.pdb
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\obj\Debug\netcoreapp3.1\BinaryHeap.csprojAssemblyReference.cache
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\obj\Debug\netcoreapp3.1\BinaryHeap.AssemblyInfoInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\obj\Debug\netcoreapp3.1\BinaryHeap.AssemblyInfo.cs
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\obj\Debug\netcoreapp3.1\BinaryHeap.dll
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\obj\Debug\netcoreapp3.1\BinaryHeap.pdb
+C:\Users\777\Desktop\Projects\DataStructures\BinaryHeap\BinaryHeap\obj\Debug\netcoreapp3.1\BinaryHeap.csproj.CoreCompileInputs.cache
