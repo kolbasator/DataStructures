@@ -1,0 +1,9 @@
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\bin\Debug\netcoreapp3.1\BinaryMinHeap.deps.json
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\bin\Debug\netcoreapp3.1\BinaryMinHeap.dll
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\obj\Debug\netcoreapp3.1\BinaryMinHeap.csprojAssemblyReference.cache
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\obj\Debug\netcoreapp3.1\BinaryMinHeap.AssemblyInfoInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\obj\Debug\netcoreapp3.1\BinaryMinHeap.AssemblyInfo.cs
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\bin\Debug\netcoreapp3.1\BinaryMinHeap.pdb
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\obj\Debug\netcoreapp3.1\BinaryMinHeap.csproj.CoreCompileInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\obj\Debug\netcoreapp3.1\BinaryMinHeap.dll
+C:\Users\777\Desktop\Projects\DataStructures\BinaryMinHeap\BinaryMinHeap\obj\Debug\netcoreapp3.1\BinaryMinHeap.pdb
