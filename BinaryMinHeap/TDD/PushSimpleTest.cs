@@ -14,7 +14,9 @@ namespace TDD
             heap.Insert(15);
             heap.Insert(10);
             heap.Insert(5);
-            heap.Items.Should().BeEquivalentTo(new int[] { 5,15,10,45 }); 
+            heap.Insert(25);
+            heap.Insert(35);
+            heap.Items.Should().BeEquivalentTo(new int[] { 5,15,10,25,35,45 }); 
         }
     }
 }
