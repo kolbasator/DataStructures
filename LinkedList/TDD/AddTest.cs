@@ -22,12 +22,8 @@ namespace TDD
             linkedList.First.Data.Should().Be("A");
             linkedList.First.Next.Data.Should().Be("B");
             linkedList.First.Next.Next.Data.Should().Be("C");
-            linkedList.First.Next.Next.Next.Data.Should().Be("D");
-            linkedList.First.Next.Previous.Data.Should().Be("A");
-            linkedList.First.Next.Next.Previous.Data.Should().Be("B");
-            linkedList.First.Next.Next.Next.Previous.Data.Should().Be("C");
-            linkedList.Last.Data.Should().Be("E");
-            linkedList.Last.Previous.Data.Should().Be("D");
+            linkedList.First.Next.Next.Next.Data.Should().Be("D"); 
+            linkedList.Last.Data.Should().Be("E"); 
             linkedList.Clear();
             linkedList.IsEmpty.Should().BeTrue();
             linkedList.Count.Should().Be(0);

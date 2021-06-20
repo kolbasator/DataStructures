@@ -14,8 +14,7 @@ namespace TDD
             linkedList.AddLast("B");
             linkedList.AddLast("C");
             linkedList.Reverse();
-            linkedList.First.Data.Should().Be("C");
-            linkedList.Last.Previous.Data.Should().Be("B");
+            linkedList.First.Data.Should().Be("C"); 
             linkedList.Last.Data.Should().Be("A");
         }
     }
