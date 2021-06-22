@@ -7,3 +7,12 @@ C:\Users\777\Desktop\Projects\DataStructures\BST\BinarySearchTree\BinarySearchTr
 C:\Users\777\Desktop\Projects\DataStructures\BST\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\777\Desktop\Projects\DataStructures\BST\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.dll
 C:\Users\777\Desktop\Projects\DataStructures\BST\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.pdb
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\bin\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.deps.json
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\bin\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.dll
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\bin\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.pdb
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.csprojAssemblyReference.cache
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.AssemblyInfoInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.AssemblyInfo.cs
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.dll
+C:\Users\777\Desktop\Projects\DataStructures\BinarySearchTree\BinarySearchTree.DataAccess\obj\Debug\netcoreapp3.1\BinarySearchTree.DataAccess.pdb

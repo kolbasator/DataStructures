@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj": {}
+    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj": {
+    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj",
+        "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj",
         "projectName": "BinarySearchTree.ConsoleUI",
-        "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj",
+        "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj",
         "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree\\obj\\",
+        "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",

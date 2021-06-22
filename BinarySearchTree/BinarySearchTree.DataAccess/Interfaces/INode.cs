@@ -14,5 +14,13 @@ namespace BinarySearchTree
         bool HasRightChild { get;}
         bool HasLeftChild { get; } 
         bool HasNoChild { get; }
+        void Delete(INode root, int key);
+        INode Insert(int entity,INode tree);
+        INode GetMax(INode tree);
+        INode GetMin(INode tree);
+        INode Search(int entity, INode tree);
+        string InOrderTraverse();
+        string PostOrderTraverse();
+        string PreOrderTraverse();
     }
 }

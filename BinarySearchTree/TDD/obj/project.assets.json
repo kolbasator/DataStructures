@@ -4809,11 +4809,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\TDD\\TDD.csproj",
+      "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\TDD\\TDD.csproj",
       "projectName": "TDD",
-      "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\TDD\\TDD.csproj",
+      "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\TDD\\TDD.csproj",
       "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\TDD\\obj\\",
+      "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\TDD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4829,11 +4829,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree.DataAccess\\BinarySearchTree.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree.DataAccess\\BinarySearchTree.DataAccess.csproj"
+            "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree.DataAccess\\BinarySearchTree.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree.DataAccess\\BinarySearchTree.DataAccess.csproj"
             },
-            "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj": {
-              "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BST\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj"
+            "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj": {
+              "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\BinarySearchTree\\BinarySearchTree\\BinarySearchTree.ConsoleUI.csproj"
             }
           }
         }
