@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System; 
+using AVLTree.Interfaces;
 
 namespace AVLTree.Implementations
 {
@@ -24,43 +21,30 @@ namespace AVLTree.Implementations
             Root = this;
             Height = 0;
         }
+
         public int BalanceFactor(INode node)
         {
-            if (node.HasRightChild)
-            {
+            if (node == null)
                 return 0;
-            }
             return GetHeight(node.Right) - GetHeight(node.Left);
         }
+
         public int GetHeight(INode node)
         {
-            if (node == null)
-            {
+            if (node == null) 
                 return -1;
-            }
             if (node.HasNoChild)
-            {
                 return 0;
-            }
-            int right = GetHeight(node.Right);
             int left = GetHeight(node.Left);
-            int greatest = right > left ? right : left;
-            int height = greatest + 1;
-            return height;
+            int right = GetHeight(node.Right);
+            return (left > right ? left : right) + 1;
         }
+
         public void FixHeight(INode node)
         {
             node.Height = GetHeight(node);
         }
-        public INode RotateLeft(INode node)
-        {
-            var newRoot = node.Right;
-            node.Right = newRoot.Left;
-            newRoot.Left = node;
-            FixHeight(node);
-            FixHeight(newRoot);
-            return newRoot;
-        }
+
         public INode RotateRight(INode node)
         {
             var newRoot = node.Left;
@@ -69,9 +53,65 @@ namespace AVLTree.Implementations
             FixHeight(node);
             FixHeight(newRoot);
             return newRoot;
+        } 
+        public INode RotateLeft(INode node)
+        {
+            var newRoot = node.Right;
+            node.Right= newRoot.Left;
+            newRoot.Left = node;
+            FixHeight(node);
+            FixHeight(newRoot);
+            return newRoot;
         }
-        public INode RotateLeftRight(INode node)
-        { 
+
+        public INode HeavyLeftRotate(INode node)
+        {
+            node.Right = RotateRight(node.Right); 
+            return RotateLeft(node);
+        }
+
+        public INode HeavyRightRotate(INode node)
+        {
+            node.Left = RotateLeft(node.Left); 
+            return RotateRight(node);
+        }
+
+        public INode Balance(INode node)
+        {
+            FixHeight(node);
+            if (BalanceFactor(node) > 1)
+            {
+                if (BalanceFactor(node.Right) < 0)
+                {
+                    return HeavyLeftRotate(node);
+                }
+                return RotateLeft(node);
+            }
+            else if (BalanceFactor(node) < -1)
+            {
+                if (BalanceFactor(node.Left) > 0)
+                {
+                    return HeavyRightRotate(node);
+                }
+                return RotateRight(node);
+            }
+            return node;
+        }
+
+        public INode Insert(INode node, int key)
+        {
+            if (node == null) 
+                return new Node(key);
+            if (node.Key > key)
+                node.Left = Insert(node.Left, key);
+            else
+                node.Right = Insert(node.Right, key);
+            return Balance(node);
+        }
+
+        public INode Remove(INode node, int key)
+        {
+            throw new NotImplementedException();
         }
     }
 }

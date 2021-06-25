@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;  
 
-namespace AVLTree
+namespace AVLTree.Interfaces
 {
     public interface INode
     {
@@ -13,7 +9,7 @@ namespace AVLTree
         INode Right { get; set; } 
         INode Root { get; set; }
         int Height { get; set; }
-        bool HasLeftChild { get; set; }
+        bool HasLeftChild { get;}
         bool HasRightChild { get; }
         bool HasNoChild { get; }
         int BalanceFactor(INode node);
@@ -21,8 +17,8 @@ namespace AVLTree
         void FixHeight(INode node);
         INode RotateRight(INode node);
         INode RotateLeft(INode node);
-        INode RotateLeftRight(INode node);
-        INode RotateRightLeft(INode node);
+        INode HeavyLeftRotate(INode node);
+        INode HeavyRightRotate(INode node);
         INode Balance(INode node);
         INode Insert(INode node, int key);
         INode Remove(INode node, int key);
