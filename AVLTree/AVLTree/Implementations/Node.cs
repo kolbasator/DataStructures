@@ -97,6 +97,45 @@ namespace AVLTree.Implementations
             }
             return node;
         }
+        public string InOrderTraverse(INode node)
+        {
+            BSTTraversalEngine.InOrderEngine(node);
+            var resultList = BSTTraversalEngine.Infix;
+            var resultString = string.Join(" ", resultList); ;
+            BSTTraversalEngine.Infix.Clear();
+            return resultString;
+        }
+        public string PostOrderTraverse(INode node)
+        {
+            BSTTraversalEngine.PostOrderEngine(node);
+            var resultList = BSTTraversalEngine.Postfix;
+            var resultString = string.Join(" ", resultList); ;
+            BSTTraversalEngine.Postfix.Clear();
+            return string.Join(" ", resultList); ;
+        }
+        public string PreOrderTraverse(INode node)
+        {
+            BSTTraversalEngine.PreOrderEngine(node);
+            var resultList = BSTTraversalEngine.Prefix;
+            BSTTraversalEngine.Prefix.Clear();
+            return string.Join(" ", resultList); ;
+        }
+        public INode Search(INode node,int key)
+        {
+            INode current = node;
+            while (current != null && current.Key!=key)
+            {
+                if (key < current.Key)
+                {
+                    current = current.Left;
+                }
+                else if (key > current.Key)
+                {
+                    current = current.Right;
+                }
+            }
+            return current;
+        }
 
         public INode Insert(INode node, int key)
         {
@@ -107,6 +146,24 @@ namespace AVLTree.Implementations
             else
                 node.Right = Insert(node.Right, key);
             return Balance(node);
+        }
+        public INode GetMax(INode node)
+        {
+            INode currentNode = node;
+            while (currentNode.HasRightChild)
+            {
+                currentNode = currentNode.Right;
+            }
+            return currentNode;
+        }
+        public INode GetMin(INode node)
+        {
+            INode currentNode = node;
+            while (currentNode.HasLeftChild)
+            {
+                currentNode = currentNode.Left;
+            }
+            return currentNode;
         }
 
         public INode Remove(INode node, int key)

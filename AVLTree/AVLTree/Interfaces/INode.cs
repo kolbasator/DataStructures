@@ -20,7 +20,14 @@ namespace AVLTree.Interfaces
         INode HeavyLeftRotate(INode node);
         INode HeavyRightRotate(INode node);
         INode Balance(INode node);
+        INode Search(INode node,int key);
+        INode GetMin(INode node);
+        INode GetMax(INode node);
         INode Insert(INode node, int key);
         INode Remove(INode node, int key);
+        string InOrderTraverse(INode node);
+        string PostOrderTraverse(INode node);
+        string PreOrderTraverse(INode node);
+
     }
 }
