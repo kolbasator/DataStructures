@@ -5,21 +5,21 @@ using FluentAssertions;
 
 namespace TDD
 {
-    public class InsertionFirstTest
+    public class SearchThirdTest
     {
         [Test]
-        public void InsertionFirstSimpleTest()
+        public void SearchThirdSimpleTest()
         {
             INode tree = new Node(1);
             tree = tree.Insert(tree, 2);
             tree = tree.Insert(tree, 3);
             tree = tree.Insert(tree, 4);
-            tree = tree.Insert(tree, 5); 
+            tree = tree.Insert(tree, 5);
             tree = tree.Insert(tree, 6);
             tree = tree.Insert(tree, 7);
             tree = tree.Insert(tree, 8);
             tree = tree.Insert(tree, 9);
-            tree.PreOrderTraverse(tree).Should().Be("4 2 1 3 6 5 8 7 9");
+            tree.Search(tree, 7).Key.Should().Be(7);
         }
     }
 }

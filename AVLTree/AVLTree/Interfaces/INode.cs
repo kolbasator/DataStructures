@@ -25,6 +25,7 @@ namespace AVLTree.Interfaces
         INode GetMax(INode node);
         INode Insert(INode node, int key);
         INode Remove(INode node, int key);
+        INode GetParent(int key); 
         string InOrderTraverse(INode node);
         string PostOrderTraverse(INode node);
         string PreOrderTraverse(INode node);

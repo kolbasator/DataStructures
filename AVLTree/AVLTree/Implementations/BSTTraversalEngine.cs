@@ -20,18 +20,18 @@ namespace AVLTree.Interfaces
         {
             if (node != null)
             {
-                InOrderEngine(node.Left);
-                InOrderEngine(node.Right);
-                Infix.Add(node.Key);
+                PostOrderEngine(node.Left);
+                PostOrderEngine(node.Right);
+                Postfix.Add(node.Key);
             }
         }
         public static void PreOrderEngine(INode node)
         {
             if (node != null)
             {
-                Infix.Add(node.Key);
-                InOrderEngine(node.Left);
-                InOrderEngine(node.Right);
+                Prefix.Add(node.Key);
+                PreOrderEngine(node.Left);
+                PreOrderEngine(node.Right);
             }
         }
     }

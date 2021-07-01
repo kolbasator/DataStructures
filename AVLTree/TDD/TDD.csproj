@@ -17,8 +17,4 @@
     <ProjectReference Include="..\AVLTree\AVLTree.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DeletionTests\" />
-  </ItemGroup>
-
 </Project>
