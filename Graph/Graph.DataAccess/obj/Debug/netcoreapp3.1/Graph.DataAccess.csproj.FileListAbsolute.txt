@@ -1,0 +1,4 @@
+C:\Users\777\Desktop\Projects\DataStructures\Graph\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.csprojAssemblyReference.cache
+C:\Users\777\Desktop\Projects\DataStructures\Graph\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.AssemblyInfoInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\Graph\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.AssemblyInfo.cs
+C:\Users\777\Desktop\Projects\DataStructures\Graph\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.csproj.CoreCompileInputs.cache
