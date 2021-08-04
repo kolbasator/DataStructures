@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph.DataAccess", "Graph.DataAccess\Graph.DataAccess.csproj", "{DE4996CF-E494-4282-99C0-6FDFB7639D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDD", "TDD\TDD.csproj", "{EFA5C1C7-947A-4723-B9BA-E915EA8C9B74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE4996CF-E494-4282-99C0-6FDFB7639D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE4996CF-E494-4282-99C0-6FDFB7639D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE4996CF-E494-4282-99C0-6FDFB7639D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE4996CF-E494-4282-99C0-6FDFB7639D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA5C1C7-947A-4723-B9BA-E915EA8C9B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA5C1C7-947A-4723-B9BA-E915EA8C9B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA5C1C7-947A-4723-B9BA-E915EA8C9B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA5C1C7-947A-4723-B9BA-E915EA8C9B74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D6EC6EFF-E2E3-4661-97B0-79A8DBCBDF44}
+	EndGlobalSection
+EndGlobal
