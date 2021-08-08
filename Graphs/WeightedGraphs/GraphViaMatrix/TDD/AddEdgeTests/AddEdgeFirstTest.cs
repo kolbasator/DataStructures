@@ -9,10 +9,10 @@ namespace TDD.AddEdgeTests
         [Test]
         public void AddEdgeFirstSimpleTest()
         { 
-            var graph = new Graph<string>(3);
+            var graph = new Graph<string>(15); 
             graph.AddVertex("A");
             graph.AddVertex("B");
-            graph.AddEdge("A", "B");
+            graph.AddEdge("A", "B",8);
             graph.AreAdjacent("A", "B").Should().BeTrue();
         }
     }

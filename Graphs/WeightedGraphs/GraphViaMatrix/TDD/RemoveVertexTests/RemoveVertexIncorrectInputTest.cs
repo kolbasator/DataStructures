@@ -10,7 +10,7 @@ namespace TDD.RemoveVertexTests
         [Test]
         public void RemoveVertexIncorrectInputSimpleTest()
         {
-            var graph = new Graph<string>(8);
+            var graph = new Graph<string>(15);
             graph.AddVertex("A");
             graph.AddVertex("B");
             graph.AddVertex("C");
@@ -18,18 +18,16 @@ namespace TDD.RemoveVertexTests
             graph.AddVertex("E");
             graph.AddVertex("F");
             graph.AddVertex("G");
-            graph.AddEdge("A", "B");
-            graph.AddEdge("A", "D");
-            graph.AddEdge("C", "B");
-            graph.AddEdge("A", "C");
-            graph.AddEdge("C", "D");
-            graph.AddEdge("F", "G");
-            graph.AddEdge("E", "F");
-            graph.AddEdge("E", "D");
-            Action firstAct = () => graph.RemoveVertex(null);
-            Action secondAct = () => graph.RemoveVertex("M");
-            firstAct.Should().Throw<Exception>().WithMessage("Incorrect input.");
-            secondAct.Should().Throw<Exception>().WithMessage("The vertex does not exist.");
+            graph.AddEdge("A", "B",6);
+            graph.AddEdge("A", "D",6);
+            graph.AddEdge("C", "B",8);
+            graph.AddEdge("A", "C",5);
+            graph.AddEdge("C", "D",3);
+            graph.AddEdge("F", "G",7);
+            graph.AddEdge("E", "F",3);
+            graph.AddEdge("E", "D",4); 
+            Action secondAct = () => graph.RemoveVertex("M"); 
+            secondAct.Should().Throw<Exception>().WithMessage("Vertex does not exist.");
         }
     }
 }

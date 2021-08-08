@@ -10,7 +10,7 @@ namespace TDD.RemoveVertexTests
         [Test]
         public void RemoveVertexSecondSimpleTest()
         {
-            var graph = new Graph<string>(6);
+            var graph = new Graph<string>(15);
             graph.AddVertex("A");
             graph.AddVertex("B");
             graph.AddVertex("C");

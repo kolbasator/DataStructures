@@ -18,19 +18,17 @@ namespace TDD.Other
             graph.AddVertex("E");
             graph.AddVertex("F");
             graph.AddVertex("G");
-            graph.AddEdge("A", "B");
-            graph.AddEdge("A", "C");
-            graph.AddEdge("A", "D");
-            graph.AddEdge("A", "E");
-            graph.AddEdge("A", "F");
-            graph.AddEdge("A", "G");
-            graph.AddEdge("B", "D");
-            graph.AddEdge("C", "D");
-            graph.AddEdge("B", "C");
-            graph.AddEdge("E", "F");
-            Action firstAct = () => graph.AreAdjacent(null, null);
-            Action secondAct = () => graph.AreAdjacent("Musyaka", "Brain");
-            firstAct.Should().Throw<Exception>().WithMessage("Incorrect input.");
+            graph.AddEdge("A", "B",1);
+            graph.AddEdge("A", "C",2);
+            graph.AddEdge("A", "D",1);
+            graph.AddEdge("A", "E",3);
+            graph.AddEdge("A", "F",3);
+            graph.AddEdge("A", "G",8);
+            graph.AddEdge("B", "D",9);
+            graph.AddEdge("C", "D",6);
+            graph.AddEdge("B", "C",9);
+            graph.AddEdge("E", "F",11); 
+            Action secondAct = () => graph.AreAdjacent("Musyaka", "Brain"); 
             secondAct.Should().Throw<Exception>().WithMessage("One or both vertices do not exist.");
         }
     }

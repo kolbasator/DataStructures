@@ -1,0 +1,16 @@
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\obj\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.csprojAssemblyReference.cache
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\obj\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.AssemblyInfoInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\obj\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.AssemblyInfo.cs
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\obj\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.csproj.CoreCompileInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\bin\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.exe
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\bin\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.deps.json
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\bin\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.runtimeconfig.json
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\bin\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.runtimeconfig.dev.json
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\bin\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.dll
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\bin\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.pdb
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\bin\Debug\netcoreapp3.1\Graph.DataAccess.dll
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\bin\Debug\netcoreapp3.1\Graph.DataAccess.pdb
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\obj\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.csproj.CopyComplete
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\obj\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.dll
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\obj\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.pdb
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\WeightedGraphs\GraphViaList\GraphViaList.Dijkstra.UI\obj\Debug\netcoreapp3.1\GraphViaList.Dijkstra.UI.genruntimeconfig.cache

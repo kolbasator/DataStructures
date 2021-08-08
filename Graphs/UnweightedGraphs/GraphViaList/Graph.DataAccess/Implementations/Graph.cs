@@ -16,99 +16,169 @@ namespace Graph.DataAccess.Implementations
         {
             _vertices = vertices;
         }
+
+        /// <summary>
+        /// Returns the size of the current graph. 
+        /// </summary> 
         public int GetSize()
         {
-            return _vertices.Count;
+            return _vertices.Count();
         }
-        public void AddVertex(T data)
+
+        /// <summary>
+        /// Adds a new vertex to the graph and returns a reference to it.
+        /// </summary>  
+        public IVertex<T> AddVertex(T data)
         {
-            if (data == null)
-            {
-                throw new Exception("Incorrect input.");
-            }
-            else if (_vertices.FirstOrDefault(v => v.GetData().Equals(data)) != null)
-            {
+            if (ContainsVertex(data))
                 throw new Exception("Vertex has already been added.");
-            }
-            _vertices.Add(new Vertex<T>(data));
+            var vertex = new Vertex<T>(data);
+            _vertices.Add(vertex);
+            return vertex;
         }
-        public void RemoveVertex(T data)
-        {
-            if (data == null)
-            {
-                throw new Exception("Incorrect input.");
-            }
-            else if (_vertices.FirstOrDefault(v => v.GetData().Equals(data)) == null)
-            {
-                throw new Exception("The vertex does not exist.");
-            }
-            var vertex = _vertices.FirstOrDefault(ver => ver.GetData().Equals(data));
-            var neighbours = vertex.GetHeighbours();
-            foreach (var neighbour in neighbours)
-            {
-                neighbour.RemoveEdge(vertex);
-            }
-            _vertices.Remove(vertex);
-        }
+
+        /// <summary>
+        /// Adds an edge with the same weight between two vertices with such data.
+        /// </summary> 
         public void AddEdge(T firstVertex, T secondVertex)
         {
-            if (firstVertex == null || secondVertex == null)
-            {
-                throw new Exception("Incorrect input.");
-            }
-            else if (_vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)) == null || _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)) == null)
-            {
+            if (!ContainsVertex(firstVertex) || !ContainsVertex(secondVertex))
                 throw new Exception("One or both vertices do not exist.");
-            }
-            _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)).AddEdge(_vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)));
-            _vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)).AddEdge(_vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)));
+            var first = _vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex));
+            var second = _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex));
+            first.AddEdge(second);
+            second.AddEdge(first);
         }
+
+        /// <summary>
+        /// Adds an edge with the same weight between two vertices.
+        /// </summary> 
+        public void AddEdge(IVertex<T> firstVertex, IVertex<T> secondVertex)
+        {
+            if (!_vertices.Contains(firstVertex) || !_vertices.Contains(secondVertex))
+                throw new Exception("One or both vertices do not exist.");
+            firstVertex.AddEdge(secondVertex);
+            secondVertex.AddEdge(firstVertex);
+        }
+
+        /// <summary>
+        /// Removes a vertex with the same data.
+        /// </summary> 
+        public void RemoveVertex(T data)
+        {
+            if (!ContainsVertex(data))
+                throw new Exception("Vertex does not exist.");
+            _vertices.Remove(_vertices.FirstOrDefault(v => v.GetData().Equals(data)));
+        }
+
+        /// <summary>
+        /// Removes a vertex by reference. 
+        /// </summary> 
+        public void RemoveVertex(IVertex<T> vertex)
+        {
+            if (!_vertices.Contains(vertex))
+                throw new Exception("Vertex does not exist.");
+            _vertices.Remove(vertex);
+        }
+
+        /// <summary>
+        /// Removes edge between two vertices with such data , if such edge exists.
+        /// </summary> 
         public void RemoveEdge(T firstVertex, T secondVertex)
         {
-
-            if (firstVertex == null || secondVertex == null)
-            {
-                throw new Exception("Incorrect input.");
-            }
-            else if (_vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)) == null || _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)) == null)
-            {
-                throw new Exception("One or both vertices do not exist.");
-            }
-            else if (!(_vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)).HasNeighbour(_vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex))) && _vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)).HasNeighbour(_vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)))))
-            {
+            if (!ContainsVertex(firstVertex) || !ContainsVertex(secondVertex))
+                throw new Exception("One ore both vertices are not exist.");
+            if (!AreAdjacent(firstVertex, secondVertex))
                 throw new Exception("Vertices are not connected.");
-            }
-            _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)).RemoveEdge(_vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)));
-            _vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)).RemoveEdge(_vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex))); 
+            var first = _vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex));
+            var second = _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex));
+            first.RemoveEdge(second);
+            second.RemoveEdge(first);
         }
+
+        /// <summary>
+        /// Removes edge between two vertices , if such edge exists.
+        /// </summary> 
+        public void RemoveEdge(IVertex<T> firstVertex, IVertex<T> secondVertex)
+        {
+            if (!_vertices.Contains(firstVertex) || !_vertices.Contains(secondVertex))
+                throw new Exception("One ore both vertices are not exist.");
+            if (!AreAdjacent(firstVertex, secondVertex))
+                throw new Exception("Vertices are not connected.");
+            firstVertex.RemoveEdge(secondVertex);
+            secondVertex.RemoveEdge(firstVertex);
+        }
+
+        /// <summary>
+        /// Clears the graph completely.
+        /// </summary> 
+        public void Reset()
+        {
+            _vertices.Clear();
+        }
+
+        /// <summary>
+        /// Removes all edges.
+        /// </summary> 
+        public void ClearEdges()
+        {
+            _vertices.ForEach(v => v.ClearNeighbours());
+        }
+
+        /// <summary>
+        /// Checks for the presence of a vertex with the same data in the graph. 
+        /// </summary> 
+        public bool ContainsVertex(T data)
+        {
+            return _vertices.Any(v => v.GetData().Equals(data));
+        }
+
+        /// <summary>
+        /// Checks if vertices are connected with the same data.
+        /// </summary> 
         public bool AreAdjacent(T firstVertex, T secondVertex)
         {
-            if (firstVertex == null || secondVertex == null)
-            {
-                throw new Exception("Incorrect input.");
-            }
-            if (_vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)) == null || _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)) == null)
-            {
+            if (!ContainsVertex(firstVertex) || !ContainsVertex(secondVertex))
                 throw new Exception("One or both vertices do not exist.");
-
-            }
-            return _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)).HasNeighbour(_vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex))) && _vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)).HasNeighbour(_vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex))); 
+            var first = _vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex));
+            var second = _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex));
+            return first.HasNeighbour(second) && second.HasNeighbour(first);
         }
+
+        /// <summary>
+        /// Checks if these vertices are connected.
+        /// </summary> 
+        public bool AreAdjacent(IVertex<T> firstVertex, IVertex<T> secondVertex)
+        {
+            if (!_vertices.Contains(firstVertex) || !_vertices.Contains(secondVertex))
+                throw new Exception("One or both vertices do not exist.");
+            return AreAdjacent(firstVertex.GetData(), secondVertex.GetData());
+        }
+
+        /// <summary>
+        /// Returns a list of all the vertices in the graph.
+        /// </summary> 
         public List<IVertex<T>> GetVertices()
         {
             return _vertices;
         }
-        public List<IVertex<T>> GetNeighbours(T vertex)
+
+        /// <summary>
+        /// Returns a list of all vertices adjacent to a vertex with such data.
+        /// </summary> 
+        public List<IVertex<T>> GetNeighbours(T data)
         {
-            if (vertex == null)
-            {
-                throw new Exception("Incorrect input.");
-            }
-            else if (_vertices.FirstOrDefault(v => v.GetData().Equals(vertex)) == null)
-            {
-                throw new Exception("The vertex does not exist.");
-            }
-            return _vertices.FirstOrDefault(v => v.GetData().Equals(vertex)).GetHeighbours()
+            if (!ContainsVertex(data))
+                throw new Exception("Vertex does not exist.");
+            return _vertices.FirstOrDefault(v => v.GetData().Equals(data)).GetNeighbours();
+        }
+
+        /// <summary>
+        /// Returns a list of all vertices adjacent to this vertex.
+        /// </summary> 
+        public List<IVertex<T>> GetNeighbours(IVertex<T> vertex)
+        {
+            return vertex.GetNeighbours();
         }
     }
 }

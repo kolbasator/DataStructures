@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\TDD\\TDD.csproj": {}
+    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\TDD\\TDD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj": {
+    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj",
         "projectName": "Graph.DataAccess",
-        "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj",
+        "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj",
         "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\Graph.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\Graph.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,14 +56,14 @@
         }
       }
     },
-    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\TDD\\TDD.csproj": {
+    "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\TDD\\TDD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\TDD\\TDD.csproj",
+        "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\TDD\\TDD.csproj",
         "projectName": "TDD",
-        "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\TDD\\TDD.csproj",
+        "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\TDD\\TDD.csproj",
         "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\TDD\\obj\\",
+        "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\TDD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -79,8 +79,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj"
+              "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\Graph.DataAccess\\Graph.DataAccess.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uACuQ9vxLI8MGKQkuW4yF/RmAVRdVS0pDbCY8/Ksk7nwct1zZQ+noBSt+1z+Nb/TpENQyp4DV3hgfNESN6VORA==",
+  "dgSpecHash": "QI29ddemEvUIjsJ/JLBlO94G6Y+HlLcmdITihzG9zv6YEQk3TQ7xDV6tBcfmyTGQakxEqsoSPiBf8uFAxN7kPw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaList\\TDD\\TDD.csproj",
+  "projectFilePath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaList\\TDD\\TDD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\777\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
     "C:\\Users\\777\\.nuget\\packages\\microsoft.codecoverage\\16.4.0\\microsoft.codecoverage.16.4.0.nupkg.sha512",

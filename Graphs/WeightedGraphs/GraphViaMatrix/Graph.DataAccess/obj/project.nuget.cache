@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CA7p+zbSoU+oLJT4nbamyGM/PAFfQyceK3MpZ0C65VY8b2X4U0QTJpSpYBGFGabp3S8QEofbVMqLbUPKebxlRA==",
+  "dgSpecHash": "GyqKSd3IjSWC+g2yM7hQnZCpOhYwiC5ZKkE7rCrCYsncOZIh/Oq0BlGKvxD8gpho/m2UtH55qVAgrM3oIp3+Vw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaMatrix\\Graph.DataAccess\\Graph.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaMatrix\\Graph.DataAccess\\Graph.DataAccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

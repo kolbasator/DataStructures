@@ -25,10 +25,8 @@ namespace TDD.RemoveVertexTests
             graph.AddEdge("C", "D");
             graph.AddEdge("F", "G");
             graph.AddEdge("E", "F");
-            graph.AddEdge("E", "D");
-            Action firstAct = () => graph.RemoveVertex(null);
-            Action secondAct = () => graph.RemoveVertex("M");
-            firstAct.Should().Throw<Exception>().WithMessage("Incorrect input.");
+            graph.AddEdge("E", "D"); 
+            Action secondAct = () => graph.RemoveVertex("M"); 
             secondAct.Should().Throw<Exception>().WithMessage("The vertex does not exist.");
         }
     }

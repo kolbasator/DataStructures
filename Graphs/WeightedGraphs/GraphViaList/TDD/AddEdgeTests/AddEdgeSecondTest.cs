@@ -13,8 +13,8 @@ namespace TDD.AddEdgeTests
             graph.AddVertex("A");
             graph.AddVertex("B");
             graph.AddVertex("C");
-            graph.AddEdge("A", "B");
-            graph.AddEdge("B", "C");
+            graph.AddEdge("A", "B",7);
+            graph.AddEdge("B", "C",9);
             graph.AreAdjacent("A", "B").Should().BeTrue();
             graph.AreAdjacent("B", "C").Should().BeTrue();
         }

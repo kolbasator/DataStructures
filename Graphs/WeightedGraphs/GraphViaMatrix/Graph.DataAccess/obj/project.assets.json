@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaMatrix\\Graph.DataAccess\\Graph.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaMatrix\\Graph.DataAccess\\Graph.DataAccess.csproj",
       "projectName": "Graph.DataAccess",
-      "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaMatrix\\Graph.DataAccess\\Graph.DataAccess.csproj",
+      "projectPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaMatrix\\Graph.DataAccess\\Graph.DataAccess.csproj",
       "packagesPath": "C:\\Users\\777\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\UnweightedGraphs\\GraphViaMatrix\\Graph.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\777\\Desktop\\Projects\\DataStructures\\Graphs\\WeightedGraphs\\GraphViaMatrix\\Graph.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\777\\AppData\\Roaming\\NuGet\\NuGet.Config",

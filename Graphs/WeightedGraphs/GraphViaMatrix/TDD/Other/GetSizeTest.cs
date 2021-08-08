@@ -9,7 +9,7 @@ namespace TDD.Other
         [Test]
         public void GetNeighborsSimpleTest()
         {
-            var graph = new Graph<string>(8);
+            var graph = new Graph<string>(15);
             graph.AddVertex("A");
             graph.AddVertex("B");
             graph.AddVertex("C");

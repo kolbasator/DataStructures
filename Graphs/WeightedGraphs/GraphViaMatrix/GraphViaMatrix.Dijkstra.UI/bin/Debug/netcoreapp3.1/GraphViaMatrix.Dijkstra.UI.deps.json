@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "GraphViaMatrix.Dijkstra.UI/1.0.0": {
+        "dependencies": {
+          "Graph.DataAccess": "1.0.0"
+        },
+        "runtime": {
+          "GraphViaMatrix.Dijkstra.UI.dll": {}
+        }
+      },
+      "Graph.DataAccess/1.0.0": {
+        "runtime": {
+          "Graph.DataAccess.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GraphViaMatrix.Dijkstra.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Graph.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

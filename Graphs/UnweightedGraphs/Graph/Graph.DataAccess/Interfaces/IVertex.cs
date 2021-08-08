@@ -1,11 +1,10 @@
-﻿ using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Graph.DataAccess.Interfaces
+﻿namespace Graph.DataAccess.Interfaces
 {
     public interface IVertex<T>
-    { 
+    {
+        /// <summary>
+        /// Returns data of this vertex.
+        /// </summary> 
         T GetData(); 
     }
 }

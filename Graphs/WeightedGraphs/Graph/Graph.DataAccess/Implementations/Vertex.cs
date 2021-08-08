@@ -5,8 +5,7 @@ namespace Graph.DataAccess.Implementations
     public class Vertex<T> : IVertex<T>
     {
         private T _data;
-        private bool _isVisited;
-        private int _distanceFromStart; 
+        private bool _isVisited; 
         public Vertex(T data)
         {
             _data = data;
@@ -42,22 +41,6 @@ namespace Graph.DataAccess.Implementations
         public bool IsVisited()
         {
             return _isVisited;
-        }
-
-        /// <summary>
-        ///  Returns the price of the shortest path to this vertex from the start.
-        /// </summary> 
-        public int GetDistance()
-        {
-            return _distanceFromStart;
-        }
-
-        /// <summary>
-        /// Changes the price of the shortest path to this vertex from the start to the specified one.
-        /// </summary> 
-        public void SetDistance(int dist)
-        {
-            _distanceFromStart = dist;
         } 
     }
 }

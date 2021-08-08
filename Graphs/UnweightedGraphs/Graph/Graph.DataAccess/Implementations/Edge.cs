@@ -1,26 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Graph.DataAccess.Interfaces;
+﻿using Graph.DataAccess.Interfaces;
 
 namespace Graph.DataAccess.Implementations
 {
     public class Edge<T> : IEdge<T>
     {
-        private IVertex<T> _first;
-        private IVertex<T> _second;
-        public Edge(IVertex<T> first,IVertex<T> second)
+        private IVertex<T> _firstVertex;
+        private IVertex<T> _secondVertex;
+        public Edge(IVertex<T> firstVertex,IVertex<T> secondVertex)
         {
-            _first = first;
-            _second = second;
-        }
+            _firstVertex = firstVertex;
+            _secondVertex = secondVertex;
+        } 
+
+        /// <summary>
+        /// Returns the first end vertex of an edge .
+        /// </summary> 
         public IVertex<T> FirstVertex()
         {
-            return _first;
+            return _firstVertex;
         }
+
+        /// <summary>
+        /// Returns the second end vertex of an edge .
+        /// </summary> 
         public IVertex<T> SecondVertex()
         {
-            return _second;
+            return _secondVertex;
         }
     }
 }

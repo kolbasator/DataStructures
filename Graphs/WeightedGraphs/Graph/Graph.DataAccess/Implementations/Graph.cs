@@ -12,7 +12,7 @@ namespace Graph.DataAccess.Implementations
         public Graph()
         {
             _vertices = new List<IVertex<T>>();
-            _edges = new List<IEdge<T>>(); 
+            _edges = new List<IEdge<T>>();
         }
 
         /// <summary>
@@ -21,6 +21,34 @@ namespace Graph.DataAccess.Implementations
         public int GetSize()
         {
             return _vertices.Count;
+        }
+
+        /// <summary>
+        /// Returns all incident edges of this vertex;
+        /// </summary> 
+        public List<IEdge<T>> IncidentEdges(IVertex<T> vertex)
+        {
+            if (!_vertices.Contains(vertex))
+                throw new Exception("Vertex does not exist.");
+            return _edges.Where(e => e.FirstVertex().Equals(vertex) || e.SecondVertex().Equals(vertex)).ToList();
+        }
+
+        /// <summary>
+        /// Returns all incident edges of this vertex which lead to unvisited neighbors.
+        /// </summary> 
+        public List<IEdge<T>> IncidentEdgesToUnvisitedVertices(IVertex<T> vertex)
+        {
+            if (!_vertices.Contains(vertex))
+                throw new Exception("Vertex does not exist.");
+            return _edges.Where(e => e.FirstVertex().Equals(vertex) && !e.SecondVertex().IsVisited() || e.SecondVertex().Equals(vertex) && !e.FirstVertex().IsVisited()).ToList();
+        }
+
+        /// <summary>
+        /// Returns a list of all unvisited vertices in this graph.
+        /// </summary> 
+        public List<IVertex<T>> UnVisitedVertices()
+        {
+            return _vertices.Where(v => !v.IsVisited()).ToList();
         }
 
         /// <summary>
@@ -42,7 +70,7 @@ namespace Graph.DataAccess.Implementations
         {
             if (!ContainsVertex(firstVertex) || !ContainsVertex(secondVertex))
                 throw new Exception("One or both vertices do not exist.");
-            var edge = new Edge<T>(_vertices.FirstOrDefault(v=>v.GetData().Equals(firstVertex)), _vertices.First(v=>v.GetData().Equals(secondVertex)), weight);
+            var edge = new Edge<T>(_vertices.FirstOrDefault(v => v.GetData().Equals(firstVertex)), _vertices.FirstOrDefault(v => v.GetData().Equals(secondVertex)), weight);
             _edges.Add(edge);
             return edge;
         }
@@ -67,11 +95,7 @@ namespace Graph.DataAccess.Implementations
             if (!ContainsVertex(data))
                 throw new Exception("The vertex does not exist.");
             var vertexToRemove = _vertices.FirstOrDefault(v => v.GetData().Equals(data));
-            var listOfIcidentEdges = _edges.Where(e => e.FirstVertex().Equals(vertexToRemove) || e.SecondVertex().Equals(vertexToRemove)).ToList();
-            foreach (var edge in listOfIcidentEdges)
-            {
-                _edges.Remove(edge);
-            }
+            IncidentEdges(vertexToRemove).ForEach(e => RemoveEdge(e));
             _vertices.Remove(vertexToRemove);
         }
 
@@ -83,11 +107,7 @@ namespace Graph.DataAccess.Implementations
             if (!_vertices.Contains(vertex))
                 throw new Exception("The vertex does not exist.");
             var vertexToRemove = _vertices.FirstOrDefault(v => v.Equals(vertex));
-            var listOfIcidentEdges = _edges.Where(e => e.FirstVertex().Equals(vertexToRemove) || e.SecondVertex().Equals(vertexToRemove));
-            foreach (var edge in listOfIcidentEdges)
-            {
-                _edges.Remove(edge);
-            }
+            IncidentEdges(vertexToRemove).ForEach(e => RemoveEdge(e));
             _vertices.Remove(vertexToRemove);
         }
 
@@ -132,9 +152,9 @@ namespace Graph.DataAccess.Implementations
         /// <summary>
         /// Checks for the presence of a vertex with the same data in the graph. 
         /// </summary> 
-        public bool ContainsVertex(T vertex)
+        public bool ContainsVertex(T data)
         {
-            return _vertices.FirstOrDefault(v => v.GetData().Equals(vertex)) != null;
+            return _vertices.Any(v => v.GetData().Equals(data));
         }
 
         /// <summary>
@@ -152,8 +172,7 @@ namespace Graph.DataAccess.Implementations
         {
             if (!ContainsVertex(firstVertex) || !ContainsVertex(secondVertex))
                 throw new Exception("One or both vertices do not exist.");
-            var edge = _edges.FirstOrDefault(e => (e.FirstVertex().GetData().Equals(firstVertex) && e.SecondVertex().GetData().Equals(secondVertex)));
-            return edge != null;
+            return _edges.Any(e => e.FirstVertex().GetData().Equals(firstVertex) && e.SecondVertex().GetData().Equals(secondVertex));
         }
 
         /// <summary>
@@ -163,8 +182,7 @@ namespace Graph.DataAccess.Implementations
         {
             if (!_vertices.Contains(firstVertex) || !_vertices.Contains(secondVertex))
                 throw new Exception("One or both vertices do not exist.");
-            var edge = _edges.FirstOrDefault(e => (e.FirstVertex().Equals(firstVertex) && e.SecondVertex().Equals(secondVertex)));
-            return edge != null;
+            return AreAdjacent(firstVertex, secondVertex);
         }
 
         /// <summary>

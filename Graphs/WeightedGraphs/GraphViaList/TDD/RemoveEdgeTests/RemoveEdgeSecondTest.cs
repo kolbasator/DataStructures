@@ -15,9 +15,9 @@ namespace TDD.RemoveEdgeTests
             graph.AddVertex("C");
             graph.AddVertex("D");
             graph.AddVertex("E");
-            graph.AddEdge("A", "B");
-            graph.AddEdge("A", "D");
-            graph.AddEdge("C", "B");
+            graph.AddEdge("A", "B",2);
+            graph.AddEdge("A", "D",3);
+            graph.AddEdge("C", "B",8);
             graph.RemoveEdge("A", "B");
             graph.RemoveEdge("A", "D");
             graph.RemoveEdge("C", "B");

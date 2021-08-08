@@ -10,6 +10,21 @@ namespace Graph.DataAccess.Interfaces
         int GetSize();
 
         /// <summary>
+        /// Returns all incident edges of this vertex.
+        /// </summary> 
+        public List<IEdge<T>> IncidentEdges(IVertex<T> vertex);
+
+        /// <summary>
+        /// Returns all incident edges of this vertex which lead to unvisited neighbors.
+        /// </summary> 
+        public List<IEdge<T>> IncidentEdgesToUnvisitedVertices(IVertex<T> vertex);
+
+        /// <summary>
+        /// Returns a list of all unvisited vertices in this graph.
+        /// </summary> 
+        List<IVertex<T>> UnVisitedVertices();
+
+        /// <summary>
         /// Adds a new vertex to the graph and returns a reference to it.
         /// </summary>  
         IVertex<T> AddVertex(T data);
@@ -57,7 +72,7 @@ namespace Graph.DataAccess.Interfaces
         /// <summary>
         /// Checks for the presence of a vertex with the same data in the graph. 
         /// </summary> 
-        bool ContainsVertex(T vertex);
+        bool ContainsVertex(T data);
 
         /// <summary>
         /// Checks for the presence of this edge in the graph.

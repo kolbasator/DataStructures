@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Graph.DataAccess.Interfaces;
+﻿using Graph.DataAccess.Interfaces;
 
 namespace Graph.DataAccess.Implementations
 {
@@ -14,13 +11,21 @@ namespace Graph.DataAccess.Implementations
             _data = data;
             _index = index;
         }
-        public int GetIndex()
-        {
-            return _index;
-        } 
+
+        /// <summary>
+        /// Returns data of this vertex.
+        /// </summary> 
         public T GetData()
         {
             return _data;
+        }
+        
+        /// <summary>
+        /// Returns index of this vertex.
+        /// </summary> 
+        public int GetIndex()
+        {
+            return _index;
         }
     }
 }

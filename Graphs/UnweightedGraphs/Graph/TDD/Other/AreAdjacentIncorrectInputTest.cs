@@ -27,10 +27,8 @@ namespace TDD.Other
             graph.AddEdge("B", "D");
             graph.AddEdge("C", "D");
             graph.AddEdge("B", "C");
-            graph.AddEdge("E", "F");
-            Action firstAct = () => graph.AreAdjacent(null, null);
-            Action secondAct = () => graph.AreAdjacent("Musyaka", "Brain");
-            firstAct.Should().Throw<Exception>().WithMessage("Incorrect input.");
+            graph.AddEdge("E", "F"); 
+            Action secondAct = () => graph.AreAdjacent("Musyaka", "Brain"); 
             secondAct.Should().Throw<Exception>().WithMessage("One or both vertices do not exist.");
         }
     }

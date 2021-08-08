@@ -18,10 +18,8 @@ namespace TDD.RemoveEdgeTests
             graph.AddVertex("E");
             graph.AddEdge("A", "B");
             graph.AddEdge("A", "D");
-            graph.AddEdge("C", "B");
-            Action firstAct = () => graph.RemoveEdge(null, null);
-            Action secondAct = () => graph.RemoveEdge("A", "E");
-            firstAct.Should().Throw<Exception>().WithMessage("Incorrect input.");
+            graph.AddEdge("C", "B"); 
+            Action secondAct = () => graph.RemoveEdge("A", "E"); 
             secondAct.Should().Throw<Exception>().WithMessage("Vertices are not connected.");
         }
     }

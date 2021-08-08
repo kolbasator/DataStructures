@@ -7,3 +7,12 @@ C:\Users\777\Desktop\Projects\DataStructures\Graphs\GraphViaList\Graph.DataAcces
 C:\Users\777\Desktop\Projects\DataStructures\Graphs\GraphViaList\Graph.DataAccess\bin\Debug\netcoreapp3.1\Graph.DataAccess.pdb
 C:\Users\777\Desktop\Projects\DataStructures\Graphs\GraphViaList\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.dll
 C:\Users\777\Desktop\Projects\DataStructures\Graphs\GraphViaList\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.pdb
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\bin\Debug\netcoreapp3.1\Graph.DataAccess.deps.json
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\bin\Debug\netcoreapp3.1\Graph.DataAccess.dll
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\bin\Debug\netcoreapp3.1\Graph.DataAccess.pdb
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.csprojAssemblyReference.cache
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.AssemblyInfoInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.AssemblyInfo.cs
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.dll
+C:\Users\777\Desktop\Projects\DataStructures\Graphs\UnweightedGraphs\GraphViaList\Graph.DataAccess\obj\Debug\netcoreapp3.1\Graph.DataAccess.pdb

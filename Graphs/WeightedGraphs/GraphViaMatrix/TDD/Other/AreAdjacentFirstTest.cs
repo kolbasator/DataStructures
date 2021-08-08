@@ -9,16 +9,16 @@ namespace TDD.Other
         [Test]
         public void AreAdjacentFirstSimpleTest()
         {
-            var graph = new Graph<string>(6);
+            var graph = new Graph<string>(15);
             graph.AddVertex("A");
             graph.AddVertex("B");
             graph.AddVertex("C");
             graph.AddVertex("D");
             graph.AddVertex("E");
-            graph.AddEdge("A", "B");
-            graph.AddEdge("A", "C");
-            graph.AddEdge("E", "D");
-            graph.AddEdge("A", "E");
+            graph.AddEdge("A", "B",8);
+            graph.AddEdge("A", "C",2);
+            graph.AddEdge("E", "D",14);
+            graph.AddEdge("A", "E",18);
             graph.AreAdjacent("A", "B").Should().BeTrue();
             graph.AreAdjacent("A", "C").Should().BeTrue();
             graph.AreAdjacent("E", "D").Should().BeTrue();

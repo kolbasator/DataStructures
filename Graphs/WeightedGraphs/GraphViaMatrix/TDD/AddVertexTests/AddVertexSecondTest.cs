@@ -10,7 +10,7 @@ namespace TDD.AddVertexTests
         [Test]
         public void AddVertexSecondSimpleTest()
         {
-            var graph = new Graph<string>(3);
+            var graph = new Graph<string>(15);
             graph.AddVertex("A");
             graph.AddVertex("B"); 
             (graph.GetVertices().FirstOrDefault(v => v.GetData() == "B") != null).Should().Be(true);
