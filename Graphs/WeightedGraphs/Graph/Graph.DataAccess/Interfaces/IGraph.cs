@@ -10,6 +10,11 @@ namespace Graph.DataAccess.Interfaces
         int GetSize();
 
         /// <summary>
+        /// Returns list of all unvisited neighbours of this vertex.
+        /// </summary> 
+        List<IVertex<T>> GetUnvisitedNeighbours(IVertex<T> vertex);
+
+        /// <summary>
         /// Returns all incident edges of this vertex.
         /// </summary> 
         public List<IEdge<T>> IncidentEdges(IVertex<T> vertex);

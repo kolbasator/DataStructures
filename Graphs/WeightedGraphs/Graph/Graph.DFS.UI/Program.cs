@@ -1,17 +1,18 @@
 ﻿using System;
 using Graph.DataAccess.Interfaces;
 using Graph.DataAccess.Implementations;
-using Graph.DataAccess.Algorithms; 
+using Graph.DataAccess.Traversal;
 
-namespace Graph.Dijkstra.UI
+namespace Graph.DFS.UI
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Dijkstra method example: ");
+            Console.WriteLine("DFS example:");
 
             IGraph<char> graph = new Graph<char>();
+            var dfs = new DFS<char>();
             var a = graph.AddVertex('A');
             var b = graph.AddVertex('B');
             var c = graph.AddVertex('C');
@@ -40,12 +41,13 @@ namespace Graph.Dijkstra.UI
 
             graph.AddEdge(c, g, 9);
 
-            var shortestPathTable = new DijkstraAlgorithm<char>().Dijkstra(graph, a);
+            Console.Write("Iterative:");
 
-            foreach (var path in shortestPathTable)
-            {
-                Console.WriteLine(path.GetData());
-            }
+            dfs.DepthFirstSearchIterative(graph, a);
+
+            Console.Write("Recursive:");
+
+            dfs.DepthFirstSearchRecursive(graph, a);
         }
     }
 }

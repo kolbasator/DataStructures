@@ -9,7 +9,8 @@ namespace Graph.DataAccess.Algorithms
     { 
         public List<DistanceModel<T>> Dijkstra(IGraph<T> graph, IVertex<T> start)
         {
-            graph.GetVertices().ForEach(v => v.UnVisit()); 
+            foreach (var vertex in graph.GetVertices())
+                vertex.UnVisit();
             var list = new List<DistanceModel<T>> { new DistanceModel<T>(start, 0, start)}; 
             var current = start; 
             while (graph.UnVisitedVertices().Any())
@@ -30,19 +31,19 @@ namespace Graph.DataAccess.Algorithms
                     }
                 }
                 current = MinUnvisitedVertex(list);
-            }
+            } 
             return list;
 
         }
         private IVertex<T> MinUnvisitedVertex(List<DistanceModel<T>> list)
         {
             var newList = list.OrderBy(m => m.Distance());
-            IVertex<T> result=null;
-            foreach(var model in newList)
+            IVertex<T> result = null;
+            foreach(var m in newList)
             {
-                if (!model.Current().IsVisited())
+                if (!m.Current().IsVisited())
                 {
-                    result = model.Current();
+                    result = m.Current();
                     break;
                 }
             }

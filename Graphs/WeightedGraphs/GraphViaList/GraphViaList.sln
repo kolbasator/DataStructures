@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph.DataAccess", "Graph.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDD", "TDD\TDD.csproj", "{3C8E3F05-B9DF-444C-86E1-4117C5F11E1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphViaList.Dijkstra.UI", "GraphViaList.Dijkstra.UI\GraphViaList.Dijkstra.UI.csproj", "{1F4FC145-94E5-4C2C-8F3C-972488E8C929}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphViaList.Dijkstra.UI", "GraphViaList.Dijkstra.UI\GraphViaList.Dijkstra.UI.csproj", "{1F4FC145-94E5-4C2C-8F3C-972488E8C929}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphViaList.DFS.UI", "GraphViaList.DFS.UI\GraphViaList.DFS.UI.csproj", "{7585BB0C-5BE9-4AC0-A706-6EFE9893A9BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1F4FC145-94E5-4C2C-8F3C-972488E8C929}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F4FC145-94E5-4C2C-8F3C-972488E8C929}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F4FC145-94E5-4C2C-8F3C-972488E8C929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7585BB0C-5BE9-4AC0-A706-6EFE9893A9BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7585BB0C-5BE9-4AC0-A706-6EFE9893A9BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7585BB0C-5BE9-4AC0-A706-6EFE9893A9BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7585BB0C-5BE9-4AC0-A706-6EFE9893A9BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

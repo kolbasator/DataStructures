@@ -6,15 +6,16 @@ using System.Collections.Generic;
 namespace Graph.DataAccess.Algorithms
 {
     public class DijkstraAlgorithm<T>
-    { 
+    {
         public List<DistanceModel<T>> Dijkstra(IGraph<T> graph, IVertex<T> start)
-        {
-            graph.GetVertices().ForEach(v => v.UnVisit());
-            var list = new List<DistanceModel<T>> { new DistanceModel<T>(start, 0, start)}; 
-            var current = start; 
+        { 
+            foreach (var vertex in graph.GetVertices())
+                vertex.UnVisit();
+            var list = new List<DistanceModel<T>> { new DistanceModel<T>(start, 0, start) };
+            var current = start;
             while (graph.UnVisitedVertices().Any())
             {
-                current.Visit(); 
+                current.Visit();
                 foreach (var edge in graph.IncidentEdgesToUnvisitedVertices(current))
                 {
                     var neighbour = edge.FirstVertex().Equals(current) ? edge.SecondVertex() : edge.FirstVertex();
@@ -25,21 +26,20 @@ namespace Graph.DataAccess.Algorithms
                         neighbourModel.ChangeDistance(tentativeDist);
                         neighbourModel.ChangePrevios(current);
                     }
-                    else if(!Contains(list,neighbour))
+                    else if (!Contains(list, neighbour))
                     {
                         list.Add(new DistanceModel<T>(neighbour, tentativeDist, current));
                     }
                 }
                 current = MinUnvisitedVertex(list);
-            }
-            return list;
-
+            } 
+            return list; 
         }
         private IVertex<T> MinUnvisitedVertex(List<DistanceModel<T>> list)
         {
             var newList = list.OrderBy(m => m.Distance());
-            IVertex<T> result=null;
-            foreach(var model in newList)
+            IVertex<T> result = null;
+            foreach (var model in newList)
             {
                 if (!model.Current().IsVisited())
                 {
@@ -48,7 +48,7 @@ namespace Graph.DataAccess.Algorithms
                 }
             }
             return result;
-        } 
+        }
         private DistanceModel<T> GetModel(List<DistanceModel<T>> list, IVertex<T> vertex)
         {
             return list.First(m => m.Current().Equals(vertex));

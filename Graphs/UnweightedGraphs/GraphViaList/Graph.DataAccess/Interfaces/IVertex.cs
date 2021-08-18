@@ -20,6 +20,21 @@ namespace Graph.DataAccess.Interfaces
         bool HasNeighbour(IVertex<T> vertex);
 
         /// <summary>
+        /// Sets the status to visited.
+        /// </summary>
+        void Visit();
+
+        /// <summary>
+        /// Sets the status to unvisited
+        /// </summary>
+        void UnVisit();
+
+        /// <summary>
+        /// Checks the visited vertex or not
+        /// </summary> 
+        bool IsVisited(); 
+
+        /// <summary>
         /// Adds that vertex into list of neighbours of this vertex. 
         /// </summary> 
         void AddEdge(IVertex<T> vertex);
@@ -38,5 +53,10 @@ namespace Graph.DataAccess.Interfaces
         /// Returns list of all neighbours of this vertex.
         /// </summary> 
         List<IVertex<T>> GetNeighbours();
+
+        /// <summary>
+        /// Returns list of all unvisited neighbours of this vertex.
+        /// </summary> 
+        List<IVertex<T>> GetUnvisitedNeighbours();
     }
 }

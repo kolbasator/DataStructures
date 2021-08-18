@@ -45,6 +45,17 @@ namespace Graph.DataAccess.Implementations
         }
 
         /// <summary>
+        /// Returns list of all unvisited neighbours of this vertex.
+        /// </summary> 
+        public List<IVertex<T>> GetUnvisitedNeighbours(IVertex<T> vertex)
+        {
+            if (!_vertices.Contains(vertex))
+                throw new Exception("Vertex does not exist.");
+            var neighbours = GetNeighbours(vertex);
+            return neighbours.Where(v => !v.IsVisited()).ToList();
+        }
+
+        /// <summary>
         /// Returns a list of all unvisited vertices in this graph.
         /// </summary> 
         public List<IVertex<T>> UnVisitedVertices()
@@ -86,7 +97,7 @@ namespace Graph.DataAccess.Implementations
             if (!_vertices.Contains(firstVertex) || !_vertices.Contains(secondVertex))
                 throw new Exception("One or both vertices does not exist.");
             _matrix[firstVertex.GetIndex(), secondVertex.GetIndex()] = weight;
-            _matrix[secondVertex.GetIndex(), secondVertex.GetIndex()] = weight;
+            _matrix[secondVertex.GetIndex(), firstVertex.GetIndex()] = weight;
         }
 
         /// <summary>

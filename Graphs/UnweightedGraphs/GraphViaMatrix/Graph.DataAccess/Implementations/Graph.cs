@@ -28,6 +28,17 @@ namespace Graph.DataAccess.Implementations
         }
 
         /// <summary>
+        /// Returns list of all unvisited neighbours of this vertex.
+        /// </summary> 
+        public List<IVertex<T>> GetUnvisitedNeighbours(IVertex<T> vertex)
+        {
+            if (!_vertices.Contains(vertex))
+                throw new Exception("Vertex does not exist.");
+            var neighbours = GetNeighbours(vertex);
+            return neighbours.Where(v => !v.IsVisited()).ToList();
+        }
+
+        /// <summary>
         /// Adds a new vertex to the graph and returns a reference to it.
         /// </summary>  
         public IVertex<T> AddVertex(T data)

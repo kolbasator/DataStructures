@@ -130,7 +130,8 @@ namespace Graph.DataAccess.Implementations
         /// </summary> 
         public void ClearEdges()
         {
-            _vertices.ForEach(v => v.ClearNeighbours());
+            foreach (var vertex in _vertices)
+                vertex.ClearNeighbours();
         }
 
         /// <summary>
@@ -179,7 +180,7 @@ namespace Graph.DataAccess.Implementations
             if (!ContainsVertex(data))
                 throw new Exception("Vertex does not exist.");
             var adjListNodes = _vertices.FirstOrDefault(v => v.GetData().Equals(data)).GetNeighbours();
-            return adjListNodes.Select(v => v.GetNeighbour()).ToList();
+            return adjListNodes.Select(n => n.GetNeighbour()).ToList();
         }
 
         /// <summary>
@@ -190,7 +191,7 @@ namespace Graph.DataAccess.Implementations
             if (!_vertices.Contains(vertex))
                 throw new Exception("Vertex does not exist.");
             var adjListNodes = vertex.GetNeighbours();
-            return adjListNodes.Select(v => v.GetNeighbour()).ToList();
+            return adjListNodes.Select(n => n.GetNeighbour()).ToList();
         }
     }
 }

@@ -20,6 +20,11 @@ namespace Graph.DataAccess.Interfaces
         int[,] GetMatrix();
 
         /// <summary>
+        /// Returns list of all unvisited neighbours of this vertex.
+        /// </summary> 
+        List<IVertex<T>> GetUnvisitedNeighbours(IVertex<T> vertex);
+
+        /// <summary>
         /// Returns a list of all unvisited vertices in this graph.
         /// </summary> 
         List<IVertex<T>> UnVisitedVertices();

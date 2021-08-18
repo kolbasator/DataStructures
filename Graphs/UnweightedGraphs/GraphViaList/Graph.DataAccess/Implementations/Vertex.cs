@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic; 
+﻿using System.Collections.Generic;
+using System.Linq;
 using Graph.DataAccess.Interfaces;
 
 namespace Graph.DataAccess.Implementations
@@ -7,6 +8,7 @@ namespace Graph.DataAccess.Implementations
     {
         private T _data;
         private List<IVertex<T>> _neighbours;
+        private bool _isVisited;
         public Vertex(T data)
         {
             _data = data;
@@ -41,7 +43,31 @@ namespace Graph.DataAccess.Implementations
         {
             return _neighbours.Contains(vertex);
         }
-      
+
+        /// <summary>
+        /// Sets the status to visited.
+        /// </summary>
+        public void Visit()
+        {
+            _isVisited = true;
+        }
+
+        /// <summary>
+        /// Sets the status to unvisited
+        /// </summary>
+        public void UnVisit()
+        {
+            _isVisited = false;
+        }
+
+        /// <summary>
+        /// Checks the visited vertex or not
+        /// </summary> 
+        public bool IsVisited()
+        {
+            return _isVisited;
+        }
+
         /// <summary>
         /// Adds that vertex into list of neighbours of this vertex. 
         /// </summary> 
@@ -72,6 +98,14 @@ namespace Graph.DataAccess.Implementations
         public List<IVertex<T>> GetNeighbours()
         {
             return _neighbours;
+        }
+
+        /// <summary>
+        /// Returns list of all unvisited neighbours of this vertex.
+        /// </summary> 
+        public List<IVertex<T>> GetUnvisitedNeighbours()
+        {
+            return _neighbours.Where(n => !n.IsVisited()).ToList();
         }
     }
 }

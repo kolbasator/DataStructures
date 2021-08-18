@@ -7,7 +7,12 @@ namespace Graph.DataAccess.Interfaces
         /// <summary>
         /// Returns the size of the current graph. 
         /// </summary> 
-        int GetSize();
+        int GetSize(); 
+
+        /// <summary>
+        /// Returns list of all unvisited neighbours of this vertex.
+        /// </summary> 
+        List<IVertex<T>> GetUnvisitedNeighbours(IVertex<T> vertex);
 
         /// <summary>
         /// Returns all incident edges of this vertex;

@@ -1,8 +1,8 @@
 ﻿using System;
 using Graph.DataAccess.Interfaces;
 using Graph.DataAccess.Implementations;
-using Graph.DataAccess.Algorithms;
-using Graph.DataAccess.Models;
+using Graph.DataAccess.Algorithms;  
+
 namespace Graph.Dijkstra.UI
 {
     class Program
@@ -17,29 +17,30 @@ namespace Graph.Dijkstra.UI
             var c = graph.AddVertex('C');
             var d = graph.AddVertex('D');
             var e = graph.AddVertex('E');
+            var f = graph.AddVertex('F');
+            var g = graph.AddVertex('G');
 
-            graph.AddEdge(a, b, 6);
-            graph.AddEdge(b, a, 6);
+            graph.AddEdge(a, b, 5); 
 
-            graph.AddEdge(a, d, 1);
-            graph.AddEdge(d, a, 1);
+            graph.AddEdge(a, d, 18); 
 
-            graph.AddEdge(d, e, 1);
-            graph.AddEdge(e, d, 1);
+            graph.AddEdge(a, f, 8); 
 
-            graph.AddEdge(d, b, 2);
-            graph.AddEdge(b, d, 2);
+            graph.AddEdge(f, d, 9); 
 
-            graph.AddEdge(e, b, 2);
-            graph.AddEdge(b, e, 2);
+            graph.AddEdge(f, c, 8); 
 
-            graph.AddEdge(e, c, 5);
-            graph.AddEdge(c, e, 5);
+            graph.AddEdge(d, c, 9); 
 
-            graph.AddEdge(c, b, 5);
-            graph.AddEdge(b, c, 5);
+            graph.AddEdge(d, e, 4); 
 
-            var shortestPathTable = new DijkstraAlgorithm<char>().Dijkstra(graph, a);
+            graph.AddEdge(d, g, 7); 
+
+            graph.AddEdge(e, g, 1); 
+
+            graph.AddEdge(c, g, 9); 
+
+            var shortestPathTable =new DijkstraAlgorithm<char>().Dijkstra(graph, a);
 
             foreach (var path in shortestPathTable)
             {
