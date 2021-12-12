@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Stack
+﻿namespace Stack.Interfaces
 {
     public interface IStack<T>
     {
         int Count { get; }
-        bool IsFull { get; }
         bool IsEmpty { get; }
         void Push(T entity);
-        T Pop();
         T Peek();
+        T Pop();
     }
 }
